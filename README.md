@@ -13,15 +13,15 @@ NeuroNur is a newly-launched, neuroscienced based research initiative whose goal
 The first model explored is the Mask Regional Connvolutional Neural Network (R-CNN). This is a popular option for instance segmentation because it is able to predict multiple overlaying objects on the pixel level. The RLE annotations were used as ground truth labels to train the model. The model being used was the Resnet50 Mask R-CNN from PyTorch. 
 
 Example 1: astrocytes
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 Raw image (left) Ground truth (center) Mask R-CNN Prediction (right)
 
 Example 2: neuroglioblastoma
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 Raw image (left) Ground truth (center) Mask R-CNN Prediction (right)
 
 Example 3: neurons
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 Raw image (left) Ground truth (center) Mask R-CNN Prediction (right)
 
 <h2>Mask2Transformer (Ongoing) </h2>
@@ -29,11 +29,11 @@ Raw image (left) Ground truth (center) Mask R-CNN Prediction (right)
 Training of this transformer-based model is currently on going. Mask2Transformer is a powerful deep learning algorithm that, like Mask RCNN, is able to detect overlapping objects on the pixel level. This transformer is backed with a pre-trained Swin Transformer model. This model is trained for semantic, instance and panoptic segmentation.Transformers have become very popular for segmentation because of their use of self-attention. As of now, COCO style ground truths have been generated from the ground truths.
 
 Example 1
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 Raw image (left) generated ground truth label (right)
 
 Example 2
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 Raw image (left) generated ground truth label (right)
 
 <h2>U-Net CNN</h2>
