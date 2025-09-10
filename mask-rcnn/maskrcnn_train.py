@@ -22,15 +22,15 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 USE_AMP = (DEVICE.type == "cuda")
 SCALER = GradScaler(device="cuda", enabled=USE_AMP)
 PIN_MEMORY = False
-BATCH_SIZE = 1  # Increased batch size for better gradient estimates
+BATCH_SIZE = 1  
 NUM_WORKERS = 0
-NUM_CLASSES = 2  # Background + cells
-EPOCHS = 15  # More epochs for better convergence
+NUM_CLASSES = 2 
+EPOCHS = 10 
 HIDDEN_VAL = 256
 LEARNING_RATE = 3e-4  # previously 5e-4
-WEIGHT_DECAY = 1e-5  # Reduced weight decay
-STEP_SIZE = 7  # Adjusted step size
-GAMMA = 0.5  # Less aggressive lr decay
+WEIGHT_DECAY = 1e-5  
+STEP_SIZE = 7  
+GAMMA = 0.5  
 
 
 BASE_DIR = "/content/drive/MyDrive/colab-projects"
@@ -206,7 +206,7 @@ for epoch in tqdm(range(1, EPOCHS + 1), desc="Epochs"):
       f"F1(inst): {val_metrics['f1_instance']:.3f}")
 
     # SAVE THE BEST CHECKPOINT
-    
+
     if val_loss < best_val:
         best_val = val_loss
         patience_counter = 0
